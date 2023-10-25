@@ -8,9 +8,8 @@ const UrlRoutes = require("./routes/shorturl.route");
 app.use((req, res, next) => {
   method = req.method;
   path = req.path;
-  params = req.params;
   ip = req.ip;
-  console.log(method + " " + path + " - " + params + " - " + ip);
+  console.log(method + " " + path + " - " + ip);
   next();
 });
 

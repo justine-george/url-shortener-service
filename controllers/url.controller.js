@@ -41,8 +41,7 @@ const redirectToUrl = async (req, res) => {
 const createShortUrl = async (req, res) => {
   const { url } = req.body;
 
-  const regex =
-    /^(https?:\/\/)?(?:www\.)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,6}(\/\S*)?$/;
+  const regex = /^(https?:\/\/)?(?:www\.)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,6}(\S*)?$/;
   if (!regex.test(url)) {
     return (
       res
