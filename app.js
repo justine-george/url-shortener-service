@@ -23,9 +23,15 @@ app.get("/", function (req, res) {
 });
 
 app.get("/api/ping", function (req, res) {
-  res.status(200).json({ status: "healthy" });
+  res
+    // .status(200)
+    .json({ status: "healthy" });
 });
 
 app.use("/api", UrlRoutes);
+
+app.use("*", (req, res) => {
+  res.status(404).json({ error: "Not Found" });
+});
 
 module.exports = app;

@@ -18,6 +18,9 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Run tests
+        env:
+          PORT: ${{ secrets.PORT }}
+          MONGO_URL: ${{ secrets.MONGO_URL }}
         run: npm run test
 
       - name: Deploy to Fly
