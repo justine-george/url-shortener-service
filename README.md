@@ -35,6 +35,7 @@ Check out the microservice [here](https://url-shortener-service.fly.dev/).
 - Express.js
 - MongoDB Atlas
 - Mongoose ODM
+- Jest
 - fly.io
 
 ## Run locally
